@@ -2,7 +2,7 @@ package main
 
 // MergeAlternately merges two strings alternating between the characters of the two strings.
 // If one of the strings is shorter than the other, the remaining characters are appended to the result.
-func MergeAlternately(word1, word2 string) string {
+func mergeAlternately(word1, word2 string) string {
 	smallest := min(len(word1), len(word2)) // compute smallest word
 	result := ""                            // returned result
 	i, j := 0, 0                            // two pointers

@@ -2,7 +2,7 @@ package main
 
 // gcdOfStrings returns the greatest common divisor of two strings.
 // It returns an empty string if the strings have no common patterns.
-func GcdOfStrings(str1 string, str2 string) string {
+func gcdOfStrings(str1 string, str2 string) string {
 	if str1+str2 != str2+str1 { // if concatination of str1 and str2 is not equal to str2+str1, it means that we cannot find gcd (i.e. they do not have common patterns)
 		return ""
 	}
