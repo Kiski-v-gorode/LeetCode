@@ -2,6 +2,25 @@ package main
 
 // kidsWithCandies returns a slice of booleans indicating whether each child has at least the given number of candies plus any additional candies.
 func kidsWithCandies(candies []int, extraCandies int) []bool {
+
+	// myMax returns the largest value in the provided slice of integers.
+	myMax := func(arr []int) int {
+		// result will hold the largest value
+		result := 0
+
+		// loop through each value in the array
+		for _, value := range arr {
+			// check if the current value is greater than the current largest value
+			if value > result {
+				// if the current value is greater, update the largest value
+				result = value
+			}
+		}
+
+		// return the largest value
+		return result
+	}
+
 	// result is a slice of booleans that will be returned
 	result := make([]bool, len(candies))
 
@@ -27,23 +46,5 @@ func kidsWithCandies(candies []int, extraCandies int) []bool {
 	}
 
 	// return the result slice
-	return result
-}
-
-// myMax returns the largest value in the provided slice of integers.
-func myMax(arr []int) int {
-	// result will hold the largest value
-	result := 0
-
-	// loop through each value in the array
-	for _, value := range arr {
-		// check if the current value is greater than the current largest value
-		if value > result {
-			// if the current value is greater, update the largest value
-			result = value
-		}
-	}
-
-	// return the largest value
 	return result
 }

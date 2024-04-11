@@ -68,16 +68,3 @@ func canPlaceFlowersAlternative(flowerbed []int, n int) bool {
 	// - It returns true if the count of remaining flowers n becomes 0, otherwise it returns false.
 	return n == 0
 }
-
-func appendToStart(arr []int, newElement int) []int {
-	// create a new slice 1 element longer than the original slice
-	newSlice := make([]int, len(arr)+1)
-	// copy the original slice to the new slice, starting at index 1
-	copy(newSlice[1:], arr)
-	// assign the value newElement to the new element with index 0
-	newSlice[0] = newElement
-	// assign a new slice to the original slice
-	arr = newSlice
-	// return the updated slice
-	return arr
-}
